@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: sans-serif;
+}
+
 a {
     color: #C6CBE1;
     text-decoration: none;
@@ -11,6 +15,14 @@ a {
 
 .no-display {
     display: none;
+}
+
+.open {
+    display: flex !important;
+}
+
+.open2 {
+    display: inline !important;
 }
 
 #main {
@@ -165,8 +177,16 @@ header {
     border: none;
 }
 
+#start-button:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+
 #sign-pop-up-div {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -179,10 +199,140 @@ header {
 }
 
 #form-sign-in {
-    width: 500px;
+    width: 400px;
     height: 600px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 24px;
 }
 
-#form-sign-in>.header {}
+#form-sign-in>.header {
+    text-align: center;
+}
+
+#form-sign-in>.header>h2 {
+    margin-top: 60px;
+}
+
+#form-sign-in>.header>p {
+    margin: 12px 0;
+}
+
+#form-sign-in>.info-to-sign-in {
+    text-align: center;
+}
+
+#form-sign-in>.info-to-sign-in .username {
+    width: 300px;
+    padding: 12px;
+    margin: 4px;
+    margin-top: 30px;
+}
+
+#form-sign-in>.info-to-sign-in .username:hover {}
+
+#form-sign-in>.info-to-sign-in .password {
+    position: relative;
+    width: 300px;
+    padding: 12px;
+    margin: 6px;
+}
+
+#form-sign-in>.info-to-sign-in .fa-solid {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: -48px;
+    padding: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.fa-eye-slash {
+    display: none;
+}
+
+#form-sign-in>.info-to-sign-in .password:hover {}
+
+#form-sign-in>.info-to-sign-in a {
+    position: relative;
+    margin: 12px 0px 24px 180px;
+    padding: 0;
+    display: inline-block;
+}
+
+#form-sign-in>.info-to-sign-in p {
+    text-align: right;
+    font-size: 12px;
+    color: rgb(53, 28, 28);
+}
+
+#form-sign-in>.info-to-sign-in p:hover {
+    color: #3E64E7;
+}
+
+#button-sign-in {
+    padding: 12px;
+    width: 300px;
+    background-color: #FC6B68;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.radius-border {
+    border-radius: 10px;
+    border: none;
+}
+
+#form-sign-in>.external-link {
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+}
+
+#form-sign-in>.external-link>span::before {
+    background-image: linear-gradient(90deg, #E2EDF5, #B0B4C0);
+    content: "";
+    height: 3px;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    width: 70px;
+}
+
+#form-sign-in>.external-link>span::after {
+    background-image: linear-gradient(-90deg, #E2EDF5, #B0B4C0);
+    content: "";
+    height: 3px;
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    width: 70px;
+}
+
+#icon-link {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 120px;
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-ex {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 4px inherit #fff;
+    background-color: #EAEAEC;
+    cursor: pointer;
+}
+
+.fa-brands {
+    font-size: 24px;
+}
+
+.external-link>.footer>a {
+    color: #1A78F1;
+}

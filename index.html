@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chronos</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/d2de91f16f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                 </div>
                 <div id="sign-div">
                     <div id="sign-in-div">
-                        <a href="#" class="sign-in">Sign in</a>
+                        <a href="#" id="sign-in" class="sign-in">Sign in</a>
                     </div>
                     <div id="sign-up-div">
                         <button id="button-sign-up" onclick="">Sign up</button>
@@ -44,22 +45,46 @@
             </div>
         </div>
     </div>
-    <div id="sign-pop-up-div">
-        <div id="form-sign-in">
+    <div id="sign-pop-up-div" class="">
+        <div id="form-sign-in" class="">
             <div class="header">
-                <h3>Hello Again!</h3>
+                <h2>Hello Again!</h2>
                 <p>Welcome back you've been missed</p>
             </div>
             <div class="info-to-sign-in">
                 <form action="">
-                    <input type="text" class="username" placeholder="Enter Username" />
-                    <input type="password" class="password" placeholder="Password" />
-                    <p>Recovery Password</p>
-                    <button>Sign In</button>
+                    <input type="text" class="username radius-border" placeholder="Enter Username" />
+                    <input type="password" class="password radius-border" placeholder="Password" maxlength="52" />
+                    <button class="fa-solid fa-eye"></button>
+                    <button class="fa-solid fa-eye-slash"></button>
+                    <a href="#">
+                        <p>Recovery Password</p>
+                    </a>
+                    <button id="button-sign-in" class="radius-border" type="submit">
+              Sign In
+            </button>
                 </form>
+            </div>
+            <div class="external-link">
+                <span>Or continue with</span>
+                <div id="icon-link">
+                    <button id="google-btn" class="button-ex">
+              <i class="fa-brands fa-google"></i>
+            </button>
+                    <button id="facebook-btn" class="button-ex">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+                    <button id="apple-btn" class="button-ex">
+              <i class="fa-brands fa-apple"></i>
+            </button>
+                </div>
+                <span class="footer">Not a remember?
+            <a href="#">Register now</a>
+          </span>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
