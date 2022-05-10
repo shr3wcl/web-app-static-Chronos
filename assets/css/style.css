@@ -26,6 +26,10 @@ a {
     display: inline !important;
 }
 
+.open3 {
+    display: block !important;
+}
+
 #main {
     height: 900px;
     background-image: linear-gradient(-45deg, #23283F, #464C6E);
