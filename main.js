@@ -1,20 +1,29 @@
 const signin = document.querySelector("#sign-in");
 const modal = document.querySelector("#sign-pop-up-div");
-const form = document.querySelector("#form-sign-in");
+const formSignIn = document.querySelector("#form-sign-in");
+const formSignUp = document.querySelector("#form-sign-up");
+const signUpBtn = document.querySelector("#button-sign-up");
 
-function showSignInWindow() {
+signin.addEventListener("click", function() {
     modal.classList.add("open");
-    console.log(1);
-}
+    // formSignIn.classList.add("open2");
+});
 
-function NoShowSignInWindow() {
+modal.addEventListener("click", function() {
     modal.classList.remove("open");
-}
+    formSignIn.classList.remove("open2");
+    formSignUp.classList.remove("open2");
+});
 
-signin.addEventListener("click", showSignInWindow);
-
-modal.addEventListener("click", NoShowSignInWindow);
-
-form.addEventListener("click", function(event) {
+formSignIn.addEventListener("click", function(event) {
     event.stopPropagation();
+})
+
+formSignUp.addEventListener("click", function(event) {
+    event.stopPropagation();
+})
+
+signUpBtn.addEventListener("click", function() {
+    // formSignUp.classList.add("open2");
+    modal.classList.add("open");
 })

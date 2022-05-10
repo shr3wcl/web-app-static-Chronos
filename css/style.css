@@ -199,10 +199,12 @@ header {
 }
 
 #form-sign-in {
+    display: none;
     width: 400px;
     height: 600px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 24px;
+    animation: FormSignAni ease 1s;
 }
 
 #form-sign-in>.header {
@@ -335,4 +337,95 @@ header {
 
 .external-link>.footer>a {
     color: #1A78F1;
+}
+
+@keyframes FormSignAni {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#form-sign-up {
+    display: none;
+    width: 400px;
+    height: 650px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: FormSignAni ease 1s;
+    text-align: center;
+}
+
+#form-sign-up>.header {
+    margin-top: 48px;
+}
+
+#form-sign-up>.header>h2 {
+    margin: 4px;
+}
+
+#form-sign-up>.header>p {
+    margin: 12px;
+}
+
+#form-sign-up .ip-su {
+    border-radius: 10px;
+    border: none;
+}
+
+#form-sign-up .f-name,
+#form-sign-up .l-name {
+    margin-top: 16px;
+    width: 150px;
+    padding: 12px;
+}
+
+#form-sign-up .input-sign-up-length {
+    width: 300px;
+    padding: 12px;
+    margin: 4px;
+    margin-top: 12px
+}
+
+#button-sign-up-form {
+    border-radius: 20px;
+    margin: 24px;
+    width: 300px;
+    padding: 12px;
+    background-color: #FC6B68;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+}
+
+#form-sign-up>.external-link {
+    position: relative;
+}
+
+#form-sign-up>.external-link>span::before {
+    background-image: linear-gradient(90deg, #E2EDF5, #B0B4C0);
+    content: "";
+    height: 3px;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+    width: 70px;
+}
+
+#form-sign-up>.external-link>span::after {
+    background-image: linear-gradient(-90deg, #E2EDF5, #B0B4C0);
+    content: "";
+    height: 3px;
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    width: 70px;
+}
+
+#form-start {
+    width: 400px;
+    height: 500px;
+    background-color: red;
 }
