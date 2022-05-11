@@ -19,7 +19,7 @@
     display: none;
     width: 400px;
     height: 600px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #E0E3F6;
     border-radius: 24px;
     animation: FormSignAni ease 1s;
 }
@@ -64,8 +64,7 @@
     cursor: pointer;
 }
 
-.fa-eye,
-.fa-eye-slash {
+.fa-eye {
     display: none;
 }
 
@@ -167,7 +166,7 @@
     width: 400px;
     height: 650px;
     border-radius: 24px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #E0E3F6;
     animation: FormSignAni ease 1s;
     text-align: center;
 }
@@ -269,6 +268,8 @@
     border-radius: 30px;
 }
 
+#form-start>.image-header:hover {}
+
 #form-start>.content {
     margin: 40px 0;
     width: 100%;
@@ -309,3 +310,5 @@
     left: 48%;
     background-color: #ECE9EF;
 }
+
+#form-start>.footer>.sign-in-btn:hover {}
