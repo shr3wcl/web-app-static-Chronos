@@ -43,6 +43,8 @@ icon3.addEventListener("click", function() {
     icon6.classList.remove("hover2");
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
+    noteFrame.classList.remove("display-flex");
+
 });
 
 icon4.addEventListener("click", function() {
@@ -54,6 +56,8 @@ icon4.addEventListener("click", function() {
     icon6.classList.remove("hover2");
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
+    noteFrame.classList.remove("display-flex");
+
 });
 
 icon5.addEventListener("click", function() {
@@ -65,6 +69,8 @@ icon5.addEventListener("click", function() {
     icon1.classList.remove("hover1");
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
+    noteFrame.classList.remove("display-flex");
+
 });
 
 icon6.addEventListener("click", function() {
@@ -76,6 +82,8 @@ icon6.addEventListener("click", function() {
     icon1.classList.remove("hover1");
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
+    noteFrame.classList.remove("display-flex");
+
 });
 
 icon7.addEventListener("click", function() {
@@ -87,6 +95,8 @@ icon7.addEventListener("click", function() {
     icon6.classList.remove("hover2");
     icon1.classList.remove("hover1");
     icon8.classList.remove("hover2");
+    noteFrame.classList.remove("display-flex");
+
 });
 
 icon8.addEventListener("click", function() {
@@ -98,4 +108,6 @@ icon8.addEventListener("click", function() {
     icon6.classList.remove("hover2");
     icon7.classList.remove("hover2");
     icon1.classList.remove("hover1");
+    noteFrame.classList.remove("display-flex");
+
 });
