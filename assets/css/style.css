@@ -71,6 +71,9 @@ header {
 #brand-name {
     font-size: 20px;
     line-height: 48px;
+    background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #logo-div>a:hover {
@@ -162,8 +165,12 @@ header {
 }
 
 #content-section>h1 {
+    display: inline-block;
     font-size: 80px;
     color: #F0F3FF;
+    background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #content-section>p {
