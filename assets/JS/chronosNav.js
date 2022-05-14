@@ -8,6 +8,10 @@ const icon7 = document.querySelector(".ti-icon7");
 const icon8 = document.querySelector(".ti-icon8");
 
 const noteFrame = document.querySelector(".notes");
+const calenderFrame = document.querySelector("#frame-calender");
+const todoFrame = document.querySelector("#frame-to-do1");
+const todoFrameKanban = document.querySelector("#frame-to-do2");
+
 
 icon1.addEventListener("click", function() {
     icon1.classList.add("hover1");
@@ -19,6 +23,9 @@ icon1.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.add("display-flex");
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
 });
 
 icon2.addEventListener("click", function() {
@@ -31,7 +38,8 @@ icon2.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
-
+    calenderFrame.classList.add("display-inline");
+    todoFrame.classList.remove("display-inline");
 });
 
 icon3.addEventListener("click", function() {
@@ -44,7 +52,10 @@ icon3.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
-
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.add("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
+    todoFrameKanban.classList.add("display-inline");
 });
 
 icon4.addEventListener("click", function() {
@@ -57,6 +68,10 @@ icon4.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
+
 
 });
 
@@ -70,6 +85,9 @@ icon5.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
+    calenderFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
 
 });
 
@@ -83,7 +101,9 @@ icon6.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
-
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
 });
 
 icon7.addEventListener("click", function() {
@@ -96,7 +116,9 @@ icon7.addEventListener("click", function() {
     icon1.classList.remove("hover1");
     icon8.classList.remove("hover2");
     noteFrame.classList.remove("display-flex");
-
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
 });
 
 icon8.addEventListener("click", function() {
@@ -109,5 +131,18 @@ icon8.addEventListener("click", function() {
     icon7.classList.remove("hover2");
     icon1.classList.remove("hover1");
     noteFrame.classList.remove("display-flex");
-
+    calenderFrame.classList.remove("display-inline");
+    todoFrame.classList.remove("display-inline");
+    todoFrameKanban.classList.remove("display-inline");
 });
+
+function showNavLogo() {
+    const userlogoNav = document.querySelector("#user-logo__nav");
+    if (JSON.stringify(document.getElementsByClassName("showuser-logo__nav")) !== '{}') {
+        userlogoNav.classList.add("display-inline");
+        userlogoNav.classList.remove("showuser-logo__nav");
+    } else {
+        userlogoNav.classList.remove("display-inline");
+        userlogoNav.classList.add("showuser-logo__nav");
+    }
+};

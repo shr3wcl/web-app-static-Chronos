@@ -67,14 +67,15 @@
             </div>
             <div class="info-to-sign-in">
                 <form action="">
-                    <input type="text" class="username radius-border" placeholder="Enter Username" name="username" />
+                    <input type="text" id="sign-in__username" class="username radius-border" placeholder="Enter Username" name="username" />
                     <input type="password" class="password radius-border" placeholder="Password" maxlength="52" name="password" id="pw1" />
                     <button type="button" class="fa-solid fa-eye fa-eye1"></button>
                     <button type="button" class="fa-solid fa-eye-slash fa-eye-slash1"></button>
+
                     <a href="#">
                         <p>Recovery Password</p>
                     </a>
-                    <button id="button-sign-in" class="radius-border" type="submit" onclick="SignInAction()">
+                    <button id="button-sign-in" class="radius-border" type="button" onclick="SignInAction()">
               Sign In
             </button>
                 </form>
@@ -138,6 +139,17 @@
         <script src="assets/JS/formSign.js"></script>
         <script src="assets/JS/Layout.js"></script>
         <script src="https://kit.fontawesome.com/d2de91f16f.js" crossorigin="anonymous"></script>
+        <script>
+            function SignInAction() {
+                const UserName = document.getElementById("sign-in__username").value;
+                const Password = document.getElementById("pw1").value;
+                if (UserName == "admin" && Password == "admin") {
+                    location.assign("/chronos.html");
+                } else {
+                    alert("Error");
+                }
+            }
+        </script>
 </body>
 
 </html>
