@@ -94,7 +94,9 @@ var Core = {
             getLastRowInColumn = Core.getLastRowInColumn;
 
         forEachArr(collisionGroups, function(group) {
-            var matrix = [[]];
+            var matrix = [
+                []
+            ];
 
             forEachArr(group, function(scheduleID) {
                 var schedule = collection.items[scheduleID],

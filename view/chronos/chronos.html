@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css" />
-    <link rel="stylesheet" href="./assets/css/chronosstyle.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/note.css" />
 </head>
 
@@ -15,12 +15,15 @@
     <div id="main">
         <header>
             <div class="logo">
-                <a href="#">
+                <a href="../../index.html">
                     <h2>Chronos</h2>
                 </a>
             </div>
 
             <div class="user-logo">
+                <div class="noti">
+                    <a href="#" class="ti-bell user-logo__nof"></a>
+                </div>
                 <a href="#" onclick="showNavLogo()">
                     <i class="ti-angle-down"></i>
                     <img src="https://i.pinimg.com/474x/68/b2/06/68b2065e484c2bc5d5714d0016cd2ddd.jpg" alt="" />
@@ -49,12 +52,15 @@
         <main>
             <aside>
                 <nav class="nav1">
-                    <a href="#"><i class="ti-pencil ti-icon1 hover1"></i></a>
-                    <a href="#"><i class="ti-calendar ti-icon2"></i></a>
-                    <a href="#">
+                    <a href="#" title="Note"><i class="ti-pencil ti-icon1 hover1"></i
+            ></a>
+                    <a href="#" title="Calender"><i class="ti-calendar ti-icon2"></i
+            ></a>
+                    <a href="#" title="To-do">
                         <i class="ti-check-box ti-icon3"></i>
                     </a>
-                    <a href="#"><i class="ti-alarm-clock ti-icon4"></i></a>
+                    <a href="#" title="Alarm"><i class="ti-alarm-clock ti-icon4"></i
+            ></a>
                 </nav>
                 <nav class="nav2">
                     <a href="#"><i class="ti-book ti-icon5"></i></a>
@@ -64,6 +70,9 @@
                         <i class="ti-pin2 ti-icon8"></i>
                     </a>
                 </nav>
+                <a href="#" class="icon-chart"><i class="icon-chart ti-bar-chart"></i
+          ></a>
+                <a href="#"><i class="icon-help ti-help"></i></a>
             </aside>
             <div id="content">
                 <!-- NOTE FUNCTION -->
@@ -76,20 +85,21 @@
                 <iframe id="frame-to-do2" src="../kanban-board-main/index.html"></iframe>
 
                 <!-- CLOCK-TIME FUNC -->
-
+                <iframe id="frame-clock" src="../clock-alarm-master/index.html" frameborder="0"></iframe>
                 <!-- BOOK FUNC -->
-
+                <iframe src="../Books/source/index.html" frameborder="0" id="frame-book"></iframe>
                 <!-- STORE FUNC -->
 
                 <!-- MUSIC FUNC -->
+                <iframe id="frame-music" src="../MusicPlayer/index.html" frameborder="0"></iframe>
 
                 <!-- PIN FUNC -->
             </div>
         </main>
         <footer></footer>
     </div>
-    <script src="/assets/JS/js-note/main.js" type="module"></script>
-    <script src="/assets/JS/chronosNav.js"></script>
+    <script src="./assets/js-note/main.js" type="module"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

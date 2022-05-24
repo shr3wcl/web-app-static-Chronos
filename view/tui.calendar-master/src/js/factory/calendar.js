@@ -553,8 +553,7 @@ var mmin = Math.min;
  * });
  */
 function Calendar(container, options) {
-    options = util.extend(
-        {
+    options = util.extend({
             usageStatistics: true
         },
         options
@@ -612,7 +611,7 @@ function Calendar(container, options) {
      * @type {Drag}
      * @private
      */
-    this._dragHandler = new Drag({distance: 10}, this._layout.container);
+    this._dragHandler = new Drag({ distance: 10 }, this._layout.container);
 
     /**
      * current rendered view name. ('day', 'week', 'month')
@@ -690,9 +689,7 @@ Calendar.prototype.destroy = function() {
         }
     });
 
-    this._options = this._renderDate = this._controller
-        = this._layout = this._dragHandler = this._viewName = this._refreshMethod
-        = this._scrollToNowMethod = null;
+    this._options = this._renderDate = this._controller = this._layout = this._dragHandler = this._viewName = this._refreshMethod = this._scrollToNowMethod = null;
 };
 
 /**
@@ -705,13 +702,11 @@ Calendar.prototype._initialize = function(options) {
     var controller = this._controller,
         viewName = this._viewName;
 
-    this._options = util.extend(
-        {
+    this._options = util.extend({
             defaultView: viewName,
             taskView: true,
             scheduleView: true,
-            template: util.extend(
-                {
+            template: util.extend({
                     allday: null,
                     time: null
                 },
@@ -730,18 +725,16 @@ Calendar.prototype._initialize = function(options) {
         options
     );
 
-    this._options.week = util.extend(
-        {
+    this._options.week = util.extend({
             startDayOfWeek: 0,
             workweek: false
         },
         util.pick(this._options, 'week') || {}
     );
 
-    this._options.timezone = util.extend({zones: []}, util.pick(options, 'timezone') || {});
+    this._options.timezone = util.extend({ zones: [] }, util.pick(options, 'timezone') || {});
 
-    this._options.month = util.extend(
-        {
+    this._options.month = util.extend({
             startDayOfWeek: 0,
             workweek: false,
             scheduleFilter: function(schedule) {
@@ -1336,8 +1329,7 @@ Calendar.prototype.setCalendarColor = function(calendarId, option, silent) {
         );
     }
 
-    ownColor = calColor[calendarId] = util.extend(
-        {
+    ownColor = calColor[calendarId] = util.extend({
             color: '#000',
             bgColor: '#a1b56c',
             borderColor: '#a1b56c',

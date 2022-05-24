@@ -18,7 +18,8 @@ li {
 }
 
 #main {
-    background-color: #2A263E;
+    /* background-color: #2A263E; */
+    background-color: #fff;
 }
 
 header {
@@ -27,7 +28,8 @@ header {
     left: 0;
     top: 0;
     height: 48px;
-    background-color: #2A263E;
+    /* background-color: #2A263E; */
+    background-color: #fff;
     justify-content: space-around;
     border-bottom: 2px solid grey;
 }
@@ -106,7 +108,8 @@ main {
 aside {
     width: 300px;
     height: 90%;
-    background-color: #2A263E;
+    /* background-color: #2A263E; */
+    background-color: #fff;
     text-align: center;
     border-right: 3px solid #F7F7F7;
 }
@@ -189,7 +192,8 @@ aside>.log-out>a span {
 #info-user {
     width: 900px;
     height: 90%;
-    background-color: #2A263E;
+    /* background-color: #2A263E; */
+    background-color: #fff;
     /* display: flex;
     justify-content: center; */
 }
