@@ -184,5 +184,77 @@
             "capacity": "42,3kB",
             "id": 8
         }
+    ],
+    "user": [{
+            "name": "Minh Tri",
+            "avatar": "https://i.pinimg.com/564x/97/c9/08/97c9086bed00a9961c030ecfd00e84f9.jpg",
+            "id": 1
+        },
+        {
+            "name": "Bin1",
+            "avatar": "https://i.pinimg.com/564x/0f/04/ac/0f04ac135a8d6db96514bd97261c1c97.jpg",
+            "id": 2
+        },
+        {
+            "name": "Bin2",
+            "avatar": "https://i.pinimg.com/564x/71/4f/99/714f99a74891d29204448dd09830040a.jpg",
+            "id": 3
+        },
+        {
+            "name": "Phạm Minh Trí",
+            "avatar": "https://files.fullstack.edu.vn/f8-prod/user_avatars/187925/6241d59a30f5b.png",
+            "id": 4
+        }
+    ],
+    "comments": [{
+            "comment": "Hello, How are u?",
+            "idUser": 2,
+            "id": 1
+        },
+        {
+            "comment": "Hello, I'm fine",
+            "idUser": 1,
+            "id": 2
+        },
+        {
+            "comment": "What do u think about this page?",
+            "idUser": 2,
+            "id": 3
+        },
+        {
+            "comment": "Oh, I feel so good ^^, and u ?",
+            "idUser": 1,
+            "id": 4
+        },
+        {
+            "comment": "Oh, me 2, a cat in your avatar is so cute ~~",
+            "idUser": 2,
+            "id": 5
+        },
+        {
+            "comment": "<3 Thank you very much, you look so cute",
+            "idUser": 1,
+            "id": 6
+        },
+        {
+            "comment": "<3 Thank you very much, you look so cute",
+            "idUser": 1,
+            "id": 7
+        },
+        {
+            "comment": "Hello Bin1, Do you think what I'm thinking?",
+            "idUser": 3,
+            "id": 8
+        },
+        {
+            "comment": "Yeah, you're here, Bin2, gud to see u",
+            "idUser": 2,
+            "id": 9
+        },
+        {
+            "comment": "Hello everyone!",
+            "idUser": 4,
+            "id": 10
+        }
     ]
 }
