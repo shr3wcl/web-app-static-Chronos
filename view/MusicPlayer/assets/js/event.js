@@ -1,3 +1,4 @@
+const Api = "http://localhost:3000/music";
 const playBtn = document.querySelector('.play');
 const song = document.querySelector('#song-audio-tag');
 const nextBtn = document.querySelector('.next');
@@ -13,6 +14,8 @@ let indexSong = 0;
 let musicList = ['./locateStorage/sound/bittersweetchocolate.mp3', './locateStorage/sound/LateNightMelancholy.mp3', './locateStorage/sound/Pastlives.mp3', './locateStorage/sound/ineedagirl.mp3', './locateStorage/sound/yoursmile.mp3'];
 
 
+
+
 playBtn.onclick = () => {
     if (checkPlayBtn) {
         song.play();
@@ -25,33 +28,58 @@ playBtn.onclick = () => {
     }
 };
 
-nextBtn.onclick = () => {
-    changeSong(1);
-};
+function getArray() {
+    fetch(Api)
+        .then(Response => {
+            return Response.json();
+        })
+        .then(datas => {
+            let x = [];
+            let y = [];
+            datas.forEach(data => {
+                x.push(data.link);
+                y.push(data);
+                console.log(y);
+            })
+            nextBtn.onclick = () => {
+                changeSong(1, x, y);
+            };
 
-preBtn.onclick = () => {
-    changeSong(-1);
-};
+            preBtn.onclick = () => {
+                changeSong(-1, x, y);
 
-function changeSong(dir) {
-    if (dir === 1) {
-        if (indexSong >= musicList.length - 1) {
-            indexSong = 0;
-        } else {
-            indexSong++;
-        }
-    } else if (dir === -1) {
-        if (indexSong <= 0) {
-            indexSong = musicList.length - 1;
-        } else {
-            indexSong--;
-        }
-    }
-    song.setAttribute('src', musicList[indexSong]);
-    song.play();
-    checkPlayBtn = false;
-    playIcon.classList.add('ti-control-pause');
+            };
+
+            function changeSong(dir, x, y) {
+                if (dir === 1) {
+                    if (indexSong >= x.length - 1) {
+                        indexSong = 0;
+                    } else {
+                        indexSong++;
+                    }
+                } else if (dir === -1) {
+                    if (indexSong <= 0) {
+                        indexSong = x.length - 1;
+                    } else {
+                        indexSong--;
+                    }
+                }
+                let avatar = document.querySelector('#avatar-music');
+                let nameSong = document.querySelector('.name-song');
+                let nameSinger = document.querySelector('.name-singer');
+                avatar.src = y[indexSong].picture;
+                nameSong.textContent = y[indexSong].name;
+                nameSinger.textContent = y[indexSong].singer;
+                song.setAttribute('src', x[indexSong]);
+                song.play();
+                checkPlayBtn = false;
+                playIcon.classList.add('ti-control-pause');
+            }
+        })
 }
+
+getArray();
+
 
 volumeRange.addEventListener('change', () => {
     song.volume = volumeRange.value / 100;
