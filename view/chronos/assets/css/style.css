@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 .clear {
     clear: both;
 }
@@ -353,6 +358,7 @@ iframe {
 }
 
 #frame-music {
+    width: 102%;
     display: none;
     height: 700px;
 }

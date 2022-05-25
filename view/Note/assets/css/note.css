@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .notes {
     display: none;
     height: 100%;
