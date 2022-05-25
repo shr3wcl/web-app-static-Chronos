@@ -1,4 +1,8 @@
 var musicApi = "http://localhost:3000/music";
+let range = document.querySelector('#range');
+range.addEventListener('onchange', handleChange);
+var audioBox = document.querySelector('#song-audio-tag');
+
 
 let start = () => {
     getSongs(renderFrame);
@@ -20,7 +24,7 @@ function renderFrame(songs) {
             <li class="class-li-${song.id}">
                 <div class="music-box">
                     <div class="avatar-block">
-                        <a href="#" class="${song.link}" onclick="playMusicFunc('${song.link}', '${song.name}', '${song.singer}', '${song.time}', '${song.picture}')">
+                        <a href="#" class="${song.link}" onclick="playMusicFunc('${song.link}', '${song.name}', '${song.singer}', '${song.time}', '${song.picture}', '${song.id}')">
                             <img src="${song.picture}"      title="Picture ${song.name}">
                             <i class="ti-control-play play-icon"></i>
                         </a>
@@ -46,21 +50,54 @@ function renderFrame(songs) {
     Frame.innerHTML = html.join('');
 }
 
-function playMusicFunc(link, name1, name2, time, picture) {
-    var audioBox = document.querySelector('#song-audio-tag');
+function playMusicFunc(link, name1, name2, time, picture, id) {
     let playIcon = document.querySelector('.play');
-    let Timeduration = document.querySelector('.duration');
-    let Timeremaining = document.querySelector('.remaining');
+    let playIcon2 = document.querySelector('.play-icon');
     let avatar = document.querySelector('#avatar-music');
+    let Div = document.querySelector(`.class-li-${id}>.music-box`)
     avatar.src = picture;
     playIcon.classList.add('ti-control-pause');
     audioBox.src = link;
     song.play();
-
     let nameSong = document.querySelector('.name-song');
     let nameSinger = document.querySelector('.name-singer');
+    Div.setAttribute('background-color', 'grey');
     nameSong.textContent = name1;
     nameSinger.textContent = name2;
-    Timeduration.textContent = '0:00';
-    Timeremaining.textContent = time;
+    playIcon2.classList.add('ti-control-pause');
+    setTimeDuration();
+}
+
+function setTimeDuration() {
+    let Timeduration = document.querySelector('.duration');
+    let Timeremaining = document.querySelector('.remaining');
+
+    var audioBox = document.querySelector('#song-audio-tag');
+    const { duration, currentTime } = audioBox;
+    range.max = duration;
+    range.value = currentTime;
+    if (!duration) {
+        Timeduration.textContent = '00:00';
+    } else {
+        Timeduration.textContent = formatTime(currentTime);
+        Timeremaining.textContent = `-${formatTime(duration - currentTime)}`;
+    }
+    range.addEventListener('change', handleChange);
+}
+
+
+function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time - minutes * 60);
+    return `${minutes}:${seconds<10?'0'+seconds : seconds}`
+}
+
+setTimeDuration()
+setInterval(setTimeDuration, 1000);
+
+
+
+function handleChange() {
+    audioBox.currentTime = range.value;
+
 }

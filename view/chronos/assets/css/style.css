@@ -356,3 +356,7 @@ iframe {
     display: none;
     height: 700px;
 }
+
+#frame-storage {
+    height: 700px;
+}

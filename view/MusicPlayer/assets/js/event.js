@@ -4,6 +4,9 @@ const nextBtn = document.querySelector('.next');
 const preBtn = document.querySelector('.previous');
 let playIcon = document.querySelector('.play');
 let checkPlayBtn = true;
+const volumeRange = document.querySelector('#range-volume');
+let volumeBtn = document.querySelector('.volume');
+
 
 let indexSong = 0;
 
@@ -49,3 +52,17 @@ function changeSong(dir) {
     checkPlayBtn = false;
     playIcon.classList.add('ti-control-pause');
 }
+
+volumeRange.addEventListener('change', () => {
+    song.volume = volumeRange.value / 100;
+})
+
+volumeBtn.addEventListener('click', () => {
+    if (volumeRange.value != 0) {
+        volumeRange.value = 0;
+        song.volume = 0;
+    } else {
+        volumeRange.value = 80;
+        song.volume = 80 / 100;
+    }
+})

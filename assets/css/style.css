@@ -32,7 +32,7 @@ a {
 
 #main {
     height: 900px;
-    background-image: linear-gradient(-45deg, #23283F, #464C6E);
+    background-image: linear-gradient(-45deg, #5A5B5F, #CDCED3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@ header {
 
 #logo-div {
     position: relative;
-    left: 10%;
+    left: 8%;
     float: left;
     width: 100px;
     height: 100%;
@@ -65,11 +65,13 @@ header {
 }
 
 #logo-div>a {
-    display: block;
+    padding: 16px 12px 12px 12px;
+    background-color: rgba(126, 126, 126, 0.6);
+    border-radius: 10rem;
 }
 
 #brand-name {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 48px;
     background-image: linear-gradient(to right, #EC4899, #8b5cf6);
     -webkit-background-clip: text;
@@ -104,7 +106,7 @@ header {
     text-decoration: none;
     padding: 10px 12px;
     line-height: 48px;
-    color: #969DCC;
+    color: royalblue;
     font-size: 16px;
     text-shadow: 5px 2px 4px grey;
 }
@@ -122,6 +124,12 @@ header {
     float: right;
     text-align: center;
     margin-right: 12px;
+}
+
+#sign-in:hover {
+    background-image: linear-gradient(to right, #E06C78, #5874DC);
+    color: #384e78;
+    border-radius: 10rem;
 }
 
 #sign-in-div {
@@ -159,6 +167,11 @@ header {
     color: #ffffff;
 }
 
+#button-sign-up:hover {
+    background-image: linear-gradient(to right, #E06C78, #5874DC);
+    color: #384e78;
+}
+
 #content-section {
     padding-top: 60px;
     text-align: center;
@@ -171,11 +184,14 @@ header {
     background-image: linear-gradient(to right, #EC4899, #8b5cf6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation-name: animationForLogo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 #content-section>p {
     font-size: 20px;
-    color: #959DCB;
+    color: #fff;
     margin: 0 0 40px 0;
 }
 
@@ -204,4 +220,22 @@ header {
 .animation-2 {
     background-color: #ffffff !important;
     z-index: 1;
+}
+
+#container {
+    background-image: url('../../img/bg2.jpg');
+    background-size: 100%;
+}
+
+@keyframes animationForLogo {
+    from {
+        background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    to {
+        background-image: linear-gradient(to right, red, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

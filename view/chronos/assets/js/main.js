@@ -14,6 +14,7 @@ const todoFrameKanban = document.querySelector("#frame-to-do2");
 const clockFrame = document.querySelector("#frame-clock");
 const musicFrame = document.querySelector("#frame-music");
 const bookFrame = document.querySelector('#frame-book');
+const storageFrame = document.querySelector('#frame-storage');
 
 
 icon1.addEventListener("click", function() {
@@ -32,6 +33,7 @@ icon1.addEventListener("click", function() {
     clockFrame.classList.remove("display-inline");
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
 });
 
 icon2.addEventListener("click", function() {
@@ -50,6 +52,7 @@ icon2.addEventListener("click", function() {
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
     todoFrameKanban.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
 
 
 });
@@ -70,6 +73,8 @@ icon3.addEventListener("click", function() {
     clockFrame.classList.remove("display-inline");
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
+
 });
 
 icon4.addEventListener("click", function() {
@@ -88,6 +93,7 @@ icon4.addEventListener("click", function() {
     clockFrame.classList.add("display-inline");
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
 
 });
 
@@ -107,6 +113,7 @@ icon5.addEventListener("click", function() {
     clockFrame.classList.remove("display-inline");
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.add("display-inline");
+    storageFrame.classList.remove("display-inline");
 
 });
 
@@ -126,6 +133,7 @@ icon6.addEventListener("click", function() {
     clockFrame.classList.remove("display-inline");
     musicFrame.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.add("display-inline");
 
 });
 
@@ -145,6 +153,7 @@ icon7.addEventListener("click", function() {
     musicFrame.classList.add("display-inline");
     todoFrameKanban.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
 
 });
 
@@ -164,6 +173,7 @@ icon8.addEventListener("click", function() {
     musicFrame.classList.remove("display-inline");
     todoFrameKanban.classList.remove("display-inline");
     bookFrame.classList.remove("display-inline");
+    storageFrame.classList.remove("display-inline");
 
 });
 

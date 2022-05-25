@@ -29,7 +29,7 @@ header {
     top: 0;
     height: 48px;
     /* background-color: #2A263E; */
-    background-color: #fff;
+    background-color: #2A263E;
     justify-content: space-around;
     border-bottom: 2px solid grey;
 }
@@ -78,11 +78,16 @@ header>.nav-right>button:hover {
 }
 
 header>.nav-right>img {
+    cursor: pointer;
     margin: 0 12px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 2px solid grey;
+}
+
+header>.nav-right>img:hover {
+    opacity: 0.5;
 }
 
 header>.nav-right>a {
@@ -91,6 +96,12 @@ header>.nav-right>a {
 }
 
 header>.nav-right>a:hover {
+    background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name-of-user {
     color: royalblue;
 }
 
