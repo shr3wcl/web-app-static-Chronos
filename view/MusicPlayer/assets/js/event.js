@@ -39,7 +39,6 @@ function getArray() {
             datas.forEach(data => {
                 x.push(data.link);
                 y.push(data);
-                console.log(y);
             })
             nextBtn.onclick = () => {
                 changeSong(1, x, y);

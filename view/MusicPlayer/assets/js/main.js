@@ -2,7 +2,7 @@ var musicApi = "http://localhost:3000/music";
 let range = document.querySelector('#range');
 range.addEventListener('onchange', handleChange);
 var audioBox = document.querySelector('#song-audio-tag');
-
+var index = 0;
 
 let start = () => {
     getSongs(renderFrame);
@@ -24,7 +24,7 @@ function renderFrame(songs) {
             <li class="class-li-${song.id}">
                 <div class="music-box">
                     <div class="avatar-block">
-                        <a href="#" class="${song.link}" onclick="playMusicFunc('${song.link}', '${song.name}', '${song.singer}', '${song.time}', '${song.picture}', '${song.id}')">
+                        <a href="#" class="${song.link}" onclick="playMusicFunc('${song.link}', '${song.name}', '${song.singer}', '${song.time}', '${song.picture}', '${song.id}'   )">
                             <img src="${song.picture}"      title="Picture ${song.name}">
                             <i class="ti-control-play play-icon"></i>
                         </a>
@@ -51,6 +51,8 @@ function renderFrame(songs) {
 }
 
 function playMusicFunc(link, name1, name2, time, picture, id) {
+    indexSong = id - 1;
+    console.log(indexSong);
     let playIcon = document.querySelector('.play');
     let playIcon2 = document.querySelector('.play-icon');
     let avatar = document.querySelector('#avatar-music');
@@ -65,7 +67,7 @@ function playMusicFunc(link, name1, name2, time, picture, id) {
     nameSong.textContent = name1;
     nameSinger.textContent = name2;
     playIcon2.classList.add('ti-control-pause');
-    setTimeDuration();
+    setTimeDuration(id);
 }
 
 function setTimeDuration() {
@@ -74,6 +76,9 @@ function setTimeDuration() {
 
     var audioBox = document.querySelector('#song-audio-tag');
     const { duration, currentTime } = audioBox;
+    if (duration === currentTime) {
+        getNextSong();
+    }
     range.max = duration;
     range.value = currentTime;
     if (!duration) {
@@ -100,4 +105,42 @@ setInterval(setTimeDuration, 1000);
 function handleChange() {
     audioBox.currentTime = range.value;
 
+}
+
+function getNextSong() {
+    fetch(musicApi)
+        .then(Response => {
+            return Response.json();
+        })
+        .then(datas => {
+            let x = [];
+            let y = [];
+            datas.forEach(data => {
+                x.push(data.link);
+                y.push(data);
+            })
+            changeSong(1, x, y);
+
+            function changeSong(dir, x, y) {
+                if (dir === 1) {
+                    if (indexSong >= x.length - 1) {
+                        indexSong = 0;
+                    } else {
+                        indexSong++;
+                    }
+                }
+                let avatar1 = document.querySelector('#avatar-music');
+                let nameSong1 = document.querySelector('.name-song');
+                let nameSinger1 = document.querySelector('.name-singer');
+
+                avatar1.src = y[indexSong].picture;
+                nameSong1.textContent = y[indexSong].name;
+
+                nameSinger1.textContent = y[indexSong].singer;
+                audioBox.setAttribute('src', x[indexSong]);
+                audioBox.play();
+                checkPlayBtn = false;
+                playIcon.classList.add('ti-control-pause');
+            }
+        })
 }
