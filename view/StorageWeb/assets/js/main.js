@@ -1,4 +1,5 @@
-const api = 'http://localhost:3000/file';
+// const api = 'http://localhost:3000/file';
+const api = "https://api.npoint.io/3ee6290b51754f3fc723/file";
 
 function excute() {
     getFile(renderFrame);

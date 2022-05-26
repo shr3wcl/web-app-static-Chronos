@@ -1,5 +1,7 @@
-const userApi = 'http://localhost:3000/user';
-const commentApi = 'http://localhost:3000/comments';
+// const userApi = 'http://localhost:3000/user';
+// const commentApi = 'http://localhost:3000/comments';
+const userApi = "https://api.npoint.io/fb73dcb8550b9da6fdde/user";
+const commentApi = "https://api.npoint.io/2550caa17c8730ddc941/comments";
 let sendBtn = document.querySelector('.send-icon');
 let inputCmt = document.querySelector('#input-comment');
 let btnHeader = document.querySelector('#button-to-header>span');

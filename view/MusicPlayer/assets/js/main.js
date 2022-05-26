@@ -1,4 +1,5 @@
-var musicApi = "http://localhost:3000/music";
+// var musicApi = "http://localhost:3000/music";
+let musicApi = "https://api.npoint.io/f3010750bbfeea1107dc/music";
 let range = document.querySelector('#range');
 range.addEventListener('onchange', handleChange);
 var audioBox = document.querySelector('#song-audio-tag');
