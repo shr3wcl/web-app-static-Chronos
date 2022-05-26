@@ -31,18 +31,19 @@ a {
 }
 
 #main {
-    height: 900px;
     background-image: linear-gradient(-45deg, #5A5B5F, #CDCED3);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #container {
     width: 92%;
-    height: 92%;
+    height: 50rem;
     background-image: linear-gradient(-45deg, #2D314D, #50577E);
     border-radius: 30px;
+    margin: 40px 0;
 }
 
 header {
@@ -184,9 +185,9 @@ header {
     background-image: linear-gradient(to right, #EC4899, #8b5cf6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation-name: animationForLogo;
+    /* animation-name: animationForLogo;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 }
 
 #content-section>p {
@@ -238,4 +239,159 @@ header {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+main {
+    width: 100%;
+    height: 74rem;
+}
+
+#introduce-web {
+    height: 46rem;
+    background-color: royalblue;
+    /* background-image: url(); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introduce-web>iframe {
+    border-radius: 2rem;
+    width: 700px;
+    height: 400px;
+}
+
+#introduce-web>.content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+#introduce-web>.content>h4 {
+    margin: 24px;
+}
+
+#introduce-team {
+    position: relative;
+    height: 28rem;
+    /* background-color: rosybrown; */
+    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-31-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e1ee6e84fa2c584170bab2733ea5a1b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#introduce-team>.title {
+    position: absolute;
+    top: 24px;
+    /* left: 40px; */
+}
+
+#list-member {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#list-member>li>img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100rem;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+}
+
+#list-member>li {
+    width: 240px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #999;
+    padding: 20px 25px 60px 25px;
+    border-radius: 2rem;
+}
+
+li:hover {
+    opacity: 0.8;
+}
+
+#list-member>li>div>h4 {
+    margin-bottom: 12px;
+}
+
+#list-member>li>div>span {
+    color: #3E4464;
+}
+
+#list-member>li>div>p {
+    margin-top: 12px;
+    color: #000;
+}
+
+footer {
+    /* margin-top: 64px; */
+    width: 100%;
+    height: 8rem;
+    background-color: #162E44;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+}
+
+.info-contact {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .img-1,
+footer .img-2,
+footer .img-3 {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+footer .img-1 {
+    background-image: url(../../img/gmail.png);
+}
+
+footer .img-2 {
+    background-image: url(../../img/phone.png);
+}
+
+footer .img-3 {
+    background-image: url(../../img/location.png);
+}
+
+#google-btn {
+    background-image: url(../../img/google.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 24px;
+}
+
+#facebook-btn {
+    background-image: url(../../img/facebook-logo-2019.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 24px;
+}
+
+#apple-btn {
+    background-image: url(../../img/apple.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 24px;
 }
