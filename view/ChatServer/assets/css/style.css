@@ -18,6 +18,10 @@
     border-radius: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 #add-comment-box {
     position: fixed;
     bottom: 50px;
