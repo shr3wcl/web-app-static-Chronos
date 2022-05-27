@@ -31,7 +31,6 @@ a {
 }
 
 #main {
-    /* background-image: linear-gradient(-45deg, #5A5B5F, #CDCED3); */
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -54,7 +53,6 @@ header {
     margin-top: 40px;
     width: 100%;
     height: 48px;
-    /* background-color: black; */
 }
 
 #logo-div {
@@ -97,6 +95,9 @@ header {
 
 #nav {
     display: inline-block;
+    background-color: rgba(125, 125, 125, 0.5);
+    padding: 0 8px;
+    border-radius: 2rem;
 }
 
 #nav>li {
@@ -108,7 +109,7 @@ header {
     text-decoration: none;
     padding: 10px 12px;
     line-height: 48px;
-    color: royalblue;
+    color: #fff;
     font-size: 16px;
     text-shadow: 5px 2px 4px grey;
 }
@@ -145,7 +146,9 @@ header {
     line-height: 48px;
     padding: 0 8px;
     text-decoration: none;
-    /* color: green; */
+    background-color: rgba(125, 125, 125, 0.4);
+    border-radius: 2rem;
+    margin-right: 8px;
 }
 
 #sign-up-div {
@@ -161,7 +164,7 @@ header {
 #button-sign-up {
     font-size: 16px;
     width: 100%;
-    height: 80%;
+    height: 100%;
     border-radius: 20px;
     border: 4px inset #5670C5;
     cursor: pointer;
@@ -290,7 +293,9 @@ main {
 #introduce-team>.title {
     position: absolute;
     top: 24px;
-    /* left: 40px; */
+    background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #list-member {
@@ -305,7 +310,7 @@ main {
     height: 10rem;
     border-radius: 100rem;
     margin-bottom: 20px;
-    border: 2px solid #000;
+    border: 2px solid #999;
 }
 
 #list-member>li {
@@ -315,32 +320,79 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #999;
+    background-image: linear-gradient(-45deg, #ff9190, #5e72eb);
     padding: 20px 25px 60px 25px;
     border-radius: 2rem;
-    border: 2px solid #000;
+    border: 4px solid #999;
     margin-top: 40px;
+    justify-content: space-between;
 }
 
-li:hover {
-    opacity: 0.8;
+#list-member>li:hover {
+    background-image: linear-gradient(-45deg, #5e72eb, #ff9190);
+}
+
+#list-member>li:hover .role {
+    background-image: linear-gradient(to bottom right, #031b88, #FB7B8E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#list-member>li div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 #list-member>li>div>h4 {
     margin-bottom: 12px;
 }
 
-#list-member>li>div>span {
-    color: #3E4464;
-}
-
-#list-member>li>div>p {
+#list-member>li>div>.role {
     margin: 12px 0;
-    color: royalblue;
+    background-image: linear-gradient(to bottom right, #FB7B8E, #031b88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#list-member>li>div>a {
-    color: #000;
+#list-member .icon {
+    width: 150px;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+}
+
+#list-member .icon-1 {
+    cursor: pointer;
+    display: block;
+    background-image: url(../../img/gmail.png);
+    background-size: 100%;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+#list-member .icon-2 {
+    cursor: pointer;
+    display: block;
+    background-image: url(../../img/facebook-logo-2019.png);
+    background-size: 100%;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+}
+
+#list-member .icon-3 {
+    cursor: pointer;
+    display: block;
+    background-image: url(../../img/github.png);
+    background-size: 100%;
+    background-position: center;
+    height: 24px;
+    width: 24px;
 }
 
 footer {
