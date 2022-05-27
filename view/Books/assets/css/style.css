@@ -194,7 +194,7 @@ table input {
 
 .readnow-class:hover,
 .edit-class:hover {
-    background-image: linear-gradient(45deg, #03adab, #fdc094, #031b88) !important;
+    background-image: linear-gradient(45deg, green, #03adab, #fdc094, #031b88) !important;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
