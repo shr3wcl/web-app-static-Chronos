@@ -43,7 +43,10 @@ function setAlarm() {
 
         html.push(`
         <li>
-            <h4>${hour}:${minutes}</h4>
+            <h4>
+                <span>${hour}:${minutes}</span>
+                <i class="ti-trash"></i>
+            </h4>
         </li>
     `);
         alarmListFrame.innerHTML = html.join('');
