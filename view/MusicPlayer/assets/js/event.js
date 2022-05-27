@@ -1,5 +1,5 @@
 // const Api = "http://localhost:3000/music";
-const Api = "https://api.npoint.io/7258c32ec4ca7420b525/music";
+const Api = "https://api.npoint.io/f3010750bbfeea1107dc/music";
 const playBtn = document.querySelector('.play');
 const song = document.querySelector('#song-audio-tag');
 const nextBtn = document.querySelector('.next');
