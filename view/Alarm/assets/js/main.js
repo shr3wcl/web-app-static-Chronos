@@ -15,7 +15,7 @@ function updateTime() {
     const hour = formatTime(date.getHours());
     const minutes = formatTime(date.getMinutes());
     const seconds = formatTime(date.getSeconds());
-    display.innerText = `${hour} : ${minutes} : ${seconds}`
+    display.innerText = `${hour} : ${minutes} : ${seconds}`;
 }
 
 function formatTime(time) {
@@ -32,18 +32,24 @@ function setAlarmTime(value) {
 }
 
 function setAlarm() {
+    const input = document.querySelector('.input-alarm');
     alarmList.push(alarmTime);
-    let timeToAlarm = new Date(alarmTime);
-    let hour = timeToAlarm.getHours();
-    let minutes = timeToAlarm.getMinutes();
-    html.push(`
+
+    // console.log(hour + ' ' + minutes);
+    if (input.value != "") {
+        let timeToAlarm = new Date(alarmTime);
+        let hour = formatTime(timeToAlarm.getHours());
+        let minutes = formatTime(timeToAlarm.getMinutes());
+
+        html.push(`
         <li>
             <h4>${hour}:${minutes}</h4>
         </li>
     `);
-    alarmListFrame.innerHTML = html.join('');
+        alarmListFrame.innerHTML = html.join('');
+    }
 
-    console.log(alarmListFrame + " " + html);
+
     alarmFunc(alarmList);
 }
 
@@ -52,11 +58,9 @@ function alarmFunc() {
     if (alarmList.length > 0) {
         const current = new Date();
         const timeToAlarm = new Date(alarmList[0]);
-        console.log(1);
 
         if (timeToAlarm > current) {
             let timeout = timeToAlarm.getTime() - current.getTime();
-            console.log(alarmList);
             alarmTimeout = setTimeout(() => audio.play(), timeout);
         }
     }
@@ -65,7 +69,6 @@ function alarmFunc() {
 function clearAlarm() {
     audio.pause();
     if (alarmTimeout) {
-        console.log(alarmList);
         clearTimeout(alarmTimeout);
     }
 }
