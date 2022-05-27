@@ -14,14 +14,18 @@
 <body>
     <section class="container">
         <div id="clock"></div>
-        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local" />
+        <input onchange="setAlarmTime(this.value)" name="alarmTime" type="datetime-local" class="input-alarm" />
         <div class="controls">
-            <button onclick="setAlarm()" class="button set-alarm">
+            <!-- <button onclick="setAlarm()" class="button set-alarm"> -->
+            <button class="button set-alarm">
           <span>Set time</span>
         </button>
             <button onclick="clearAlarm()" class="button clear-alarm">
           <span>Stop all</span>
         </button>
+        </div>
+        <div>
+            <ul id="list-alarm"></ul>
         </div>
     </section>
     <script src="./assets/js/main.js"></script>

@@ -2,14 +2,18 @@ html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --dark: #374151;
-    --darker: #1F2937;
-    --darkest: #111827;
-    --grey: #6B7280;
-    --pink: #EC4899;
-    --purple: #8B5CF6;
-    --light: #EEE;
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right bottom, #EC4899, #8b5cf6);
+    border-radius: 100rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #999;
+    border-radius: 100rem;
 }
 
 * {
@@ -61,16 +65,17 @@ button {
     padding: 1rem;
     border-radius: 1rem;
     margin-right: 1rem;
-    color: var(--light);
+    color: #EEE;
     font-size: 1.25rem;
+    border: 1px solid #000;
 }
 
 #new-task-input::placeholder {
-    color: var(--grey);
+    color: #6B7280;
 }
 
 #new-task-submit {
-    color: var(--pink);
+    color: #EC4899;
     font-size: 1.25rem;
     font-weight: 700;
     cursor: pointer;
@@ -81,7 +86,7 @@ button {
 }
 
 #new-task-submit>span {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-image: linear-gradient(to right, #EC4899, #8B5CF6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -103,6 +108,7 @@ main {
     background-image: linear-gradient(-45deg, #2A263E, #362B58);
     border-radius: 30px;
     margin-bottom: 12px;
+    border: 1px solid #000;
 }
 
 .task-list {
@@ -122,7 +128,7 @@ main {
 #tasks .task {
     display: flex;
     justify-content: space-between;
-    background-color: var(--darkest);
+    background-color: #111827;
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -134,7 +140,7 @@ main {
 }
 
 .task .content .text {
-    color: var(--light);
+    color: #eee;
     font-size: 1.125rem;
     width: 100%;
     display: block;
@@ -142,7 +148,7 @@ main {
 }
 
 .task .content .text:not(:read-only) {
-    color: var(--pink);
+    color: #EC4899;
 }
 
 .task .actions {
@@ -168,7 +174,7 @@ main {
 }
 
 .task .actions .edit {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-image: linear-gradient(to right, #EC4899, #8B5CF6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -198,54 +204,3 @@ main {
         transform: translateY(-100%);
     }
 }
-
-
-/* .button-64 {
-    align-items: center;
-    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-    border: 0;
-    border-radius: 8px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    color: #FFFFFF;
-    display: flex;
-    font-size: 20px;
-    justify-content: center;
-    line-height: 1em;
-    max-width: 100%;
-    min-width: 140px;
-    padding: 3px;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.button-64:active,
-.button-64:hover {
-    outline: 0;
-}
-
-.button-64 span {
-    background-color: rgb(5, 6, 45);
-    background-color: #2A263E;
-    padding: 16px 24px;
-    border-radius: 6px;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
-    color: #fff !important;
-}
-
-.button-64:hover span {
-    background: none;
-}
-
-@media (min-width: 768px) {
-    .button-64 {
-        font-size: 24px;
-        min-width: 196px;
-    }
-} */

@@ -7,6 +7,21 @@ html {
     scroll-behavior: smooth;
 }
 
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right bottom, #EC4899, #8b5cf6);
+    border-radius: 100rem;
+}
+
+*::-webkit-scrollbar-track {
+    display: block;
+    background-color: #999;
+    border-radius: 100rem;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -22,11 +37,13 @@ html {
 
 .container>input {
     padding: 12px;
+    margin: 40px;
     border-radius: 20px;
     outline: none;
     border: none;
     background-image: linear-gradient(-45deg, #EC4899, #8b5cf6);
     background-color: #111827;
+    border: 1px solid #000;
 }
 
 #clock {
@@ -87,12 +104,27 @@ html {
     color: #000;
 }
 
+ul {
+    height: 100%;
+    overflow: auto;
+}
+
+li {
+    font-family: sans-serif;
+    list-style: none;
+    color: #fff;
+    border-bottom: 1px solid #000;
+}
+
 #list-alarm {
     position: absolute;
     width: 20%;
     height: 200px;
-    background-color: red;
-    bottom: 40px;
-    right: 10%;
-    border-radius: 20px;
+    max-height: 200px;
+    background-color: #34324C;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.5rem;
+    border: 2px solid #999;
 }

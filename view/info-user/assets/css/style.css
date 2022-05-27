@@ -35,7 +35,7 @@ header {
     /* background-color: #2A263E; */
     background-color: #2A263E;
     justify-content: space-around;
-    border-bottom: 2px solid grey;
+    /* border-bottom: 2px solid grey; */
 }
 
 header>.nav-left {
@@ -87,7 +87,7 @@ header>.nav-right>img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid grey;
+    border: 2px solid #EC4899;
 }
 
 header>.nav-right>img:hover {
@@ -126,7 +126,7 @@ aside {
     /* background-color: #2A263E; */
     background-color: #fff;
     text-align: center;
-    border-right: 3px solid #F7F7F7;
+    border-right: 2px solid #000;
 }
 
 aside>h3 {

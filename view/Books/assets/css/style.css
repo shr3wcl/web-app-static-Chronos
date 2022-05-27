@@ -72,6 +72,10 @@ html {
     border-radius: 20px 20px 0 0;
 }
 
+.book-block img:hover {
+    opacity: 0.6;
+}
+
 .book-block>a {
     display: inline-block;
     margin: 0 12px;
@@ -186,4 +190,11 @@ table input {
 .love-book:hover>i {
     display: flexbox;
     color: yellow;
+}
+
+.readnow-class:hover,
+.edit-class:hover {
+    background-image: linear-gradient(45deg, #03adab, #fdc094, #031b88) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

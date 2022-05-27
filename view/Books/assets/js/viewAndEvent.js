@@ -17,20 +17,7 @@ function getListBook(callback) {
         .then(callback);
 }
 
-function updateBook(data, id) {
-    let options = {
-        method: 'PATCH',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }
 
-    fetch(API + '/' + id, options)
-        .then(Response => {
-            return Response.json();
-        }).then(callback)
-}
 
 function renderFrame(books) {
     let listBookFrame = document.querySelector('#list-books-block');
@@ -41,8 +28,8 @@ function renderFrame(books) {
                 <img src="${book.avatar}" title="Picture">
                 <h4 title="${book.name}">${book.name}</h4>
                 <p title="${book.author}">${book.author}</p>
-                <a href="${book.link}">Read Now</a>
-                <a href="#" onclick="handleEditBook(${book.id})" id="edit-a-id-${book.id}">Edit</a>
+                <a href="${book.link}" class="readnow-class">Read Now</a>
+                <a href="#" onclick="handleEditBook(${book.id})" id="edit-a-id-${book.id}" class="edit-class">Edit</a>
                 <br>
                 <a href="#" onclick="handleDeleteBook(${book.id})">Delete</a>
                 <a href="#" id="love-book-id${book.id}" class="love-book" title="Mark as favorite" onclick="markFunc(${book.id})">
@@ -87,7 +74,22 @@ function handleAddBook(data) {
         .then(Response => {
             return Response.json();
         })
-        .then(callback);
+        .then(caches);
+}
+
+function updateBook(data, id) {
+    let options = {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+
+    fetch(API + '/' + id, options)
+        .then(Response => {
+            return Response.json();
+        }).then(caches)
 }
 
 function handleDeleteBook(id) {
@@ -103,7 +105,7 @@ function handleDeleteBook(id) {
             .then(Response => {
                 return Response.json();
             })
-            .then(callback);
+            .then(caches);
     }
 }
 

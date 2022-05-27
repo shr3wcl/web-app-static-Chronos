@@ -30,6 +30,9 @@ a {
 li {
     list-style: none;
     margin: 8px;
+    border-radius: 1rem;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
 }
 
 #main {
@@ -51,14 +54,21 @@ li {
     padding: 12px 32px;
     background-color: #442A4A;
     border-radius: 40px;
+    border: 2px solid #120C1C;
 }
 
 #music-box>.music {
     margin: 16px;
+    background-image: linear-gradient(to right, #EC4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #music-box>.time {
     margin-left: 500px;
+    background-image: linear-gradient(to right, #8b5cf6, #EC4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .music-box {
