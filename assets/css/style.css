@@ -251,10 +251,13 @@ header {
 }
 
 #container {
+    min-width: 96%;
+    min-height: 600px;
     background-image: url('../../img/bg2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
+    border-radius: 2rem;
 }
 
 @keyframes animationForLogo {
@@ -305,12 +308,14 @@ main {
 
 #introduce-team {
     position: relative;
-    height: 30rem;
     /* background-color: rosybrown; */
     background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v546batch3-mynt-31-badgewatercolor_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e1ee6e84fa2c584170bab2733ea5a1b0);
+    background-size: auto;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 32px;
 }
 
 #introduce-team>.title {
@@ -322,13 +327,14 @@ main {
 }
 
 #list-member {
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-#list-member>li>img {
+#list-member>li img {
     width: 10rem;
     height: 10rem;
     border-radius: 100rem;
@@ -509,4 +515,58 @@ footer .img-3 {
 #button-directional img {
     width: 50px;
     height: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #list-member li{
+        width: 30vw;
+        margin: 12px 32px;
+    }
+    #list-member{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #list-member li {
+        width: 36vw;
+        margin: 12px 6vw;
+    }
+    #list-member {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    iframe{
+        display: inline-block;
+        width: 90% !important;
+        height: 50vw !important;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #list-member li {
+        width: 36vw;
+        margin: 12px 6vw;
+    }
+
+    #list-member {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #list-member li {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: row;
+        width: 84vw;
+        min-width: 300px;
+        height: 100px;
+    }
+
+    #list-member li img{
+        width: 120px;
+        height: 120px;
+    }
 }
