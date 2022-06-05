@@ -108,56 +108,98 @@ header>.user-logo>a {
     position: relative;
 }
 
-#user-logo__nav {
+#user-logo-show{
+    position: relative;
+}
+
+#user-logo__nof{
+    position: relative;
+}
+
+#noti-container{
     display: none;
     position: absolute;
-    width: 160px;
-    height: 160px;
-    top: 60px;
-    right: 60px;
+    width: 300px;
     background-color: #fff;
-    border-radius: 20px;
+    top: 110%;
+    right: 110px;
+    border-radius: 1rem;
 }
 
-#user-logo__nav>.user-logo__nav--list {
-    display: inline;
+#noti-container>.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
 }
 
-#user-logo__nav>.user-logo__nav--list>li {
+
+#noti-container>.header i.fa-solid{
+    cursor: pointer;
+    position: relative;
+    color: #757575;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+#noti-container>.header i.fa-solid:hover{
+    background-color: #e5e5e5;
+}
+
+#navInfo{
+    position: absolute;
+    top: 110%;
+    right: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#navInfo>.first{
+    border-radius: 1rem 1rem 0 0;
+}
+
+#navInfo>.last {
+    border-radius:0 0 1rem 1rem ;
+}
+
+#navInfo>.last>a{
+    color: red !important;
+}
+
+#navInfo>li{
     list-style: none;
-    border-bottom: 2px solid #000;
+    background-color: rebeccapurple;
+    display: inline-block;
 }
 
-#user-logo__nav>.user-logo__nav--list a {
-    display: block;
-    padding: 10px 16px;
-    color: #000;
+#navInfo>li>a>span{
+    position: relative;
+    margin-left: 20px;
+}
+#navInfo .fa-solid::before{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: -10px;
 }
 
-#user-logo__nav>.user-logo__nav--list a.tail {
-    color: red;
+#navInfo>li>a{
+    min-width: 100%;
+    display: inline-block;
+    color: #999;
+    padding: 12px 24px;
 }
 
-#user-logo__nav>.user-logo__nav--list a:hover {
-    background-color: grey;
-    color: #000;
+#navInfo>li:hover{
+    background-color: #ccc;
 }
 
-#user-logo__nav>.user-logo__nav--list a.head:hover {
-    background-color: grey;
-    color: #000;
-    border-radius: 20px 20px 0 0;
-}
-
-#user-logo__nav>.user-logo__nav--list a.tail:hover {
-    background-color: rgb(88, 51, 51);
-    color: red;
-    border-radius: 0 0 20px 20px;
-}
-
-#user-logo__nav>.user-logo__nav--list li.tail {
-    border-bottom: none !important;
-}
 
 header>.user-logo i {
     position: relative;
@@ -238,9 +280,11 @@ main>aside {
 }
 
 aside>.nav1 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50px;
-    height: 200px;
     margin-top: 40px;
     border-radius: 30px;
     background-color: #442A4A;
@@ -248,10 +292,9 @@ aside>.nav1 {
 
 aside>.nav1>a {
     text-decoration: none;
-    display: block;
     padding: 12px 0;
+    margin-top: 4px;
     color: #9A7F98;
-    margin: 4px 0;
 }
 
 aside>.nav1>a>i {
@@ -261,9 +304,10 @@ aside>.nav1>a>i {
 }
 
 aside>.nav2 {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
     width: 50px;
-    height: 200px;
     margin-top: 40px;
     margin-bottom: 20px;
     border-radius: 30px;
@@ -275,7 +319,7 @@ aside>.nav2>a {
     display: block;
     padding: 12px 0;
     color: #9A7F98;
-    margin: 4px 0;
+    margin-top: 4px;
 }
 
 aside>.nav2>a>i {
@@ -295,7 +339,7 @@ aside>.nav2>a:hover i {
 
 aside>a.icon-chart {
     display: block;
-    margin-top: 20px;
+    margin-top: 60%;
 }
 
 aside>a {
@@ -311,12 +355,13 @@ aside>a:hover {
 }
 
 .hover1 {
-    color: #F1C6A4;
+    color: #333;
     background-color: #f8005f;
+    
 }
 
 .hover2 {
-    color: #F1C6A4;
+    color: #000;
     background-color: #5100ff;
 }
 

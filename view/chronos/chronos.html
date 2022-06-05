@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/note.css" />
     <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../assets/font/fontawesome-free-6.1.1-web/css/all.css">
 </head>
 
 <body>
@@ -23,82 +24,84 @@
 
             <div class="user-logo">
                 <div class="noti">
-                    <a href="#" class="ti-bell user-logo__nof"></a>
+                    <a href="#" class="ti-bell user-logo__nof" onclick="showNoti()"></a>
                 </div>
-                <a href="#" onclick="showNavLogo()">
+                <div id="noti-container">
+                    <div class="header">
+                        <h3>Notification</h3>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <ul id="list-noti"></ul>
+                </div>
+                <a id="user-logo-show" href="#" onclick="showNavLogo()">
                     <i class="ti-angle-down"></i>
                     <img src="https://files.fullstack.edu.vn/f8-prod/user_avatars/187925/6241d59a30f5b.png" alt="" />
-                </a>
 
-                <div class="showuser-logo__nav" id="user-logo__nav">
-                    <ul class="user-logo__nav--list">
-                        <li>
-                            <a class="head" href="../info-user/InfoUser.html">Your Profile</a
-                >
-              </li>
-              <li><a href="#">Upgrade</a></li>
-                        <li><a href="#">Setting</a></li>
-                        <li class="tail">
-                            <a class="tail" href="../../index.html">Log out</a>
-                        </li>
-                    </ul>
-                </div>
+                </a>
+                <ul id="navInfo">
+                    <li class="first"><a href="#"><i class="fa-solid fa-circle-info"></i><span
+                                class="feature">Infomation</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i><span class="feature">Help</span></a>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i><span class="feature">Setting</span></a></li>
+                    <li class="last"><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i><span
+                                class="feature">Log
+                                out</span></a></li>
+                </ul>
             </div>
             <div class="search-and-light-night">
                 <i class="ti-search"></i>
                 <input type="search" name="search" id="search-input" placeholder="Search" />
                 <button id="theme-switch">
-            <i class="ti-reload"></i>
-            <span>Switch to</span> <span class="theme">Light</span>
-          </button>
+                    <i class="ti-reload"></i>
+                    <span>Switch to</span> <span class="theme">Light</span>
+                </button>
             </div>
         </header>
         <main>
             <aside>
                 <nav class="nav1">
-                    <a href="#" title="Note"><i class="ti-pencil ti-icon1 hover1"></i
-            ></a>
-                    <a href="#" title="Calender"><i class="ti-calendar ti-icon2"></i
-            ></a>
+                    <a href="#" title="Note"><i class="ti-pencil ti-icon icon-type-1 hover1"></i></a>
+                    <a href="#" title="Calender"><i class="ti-calendar ti-icon icon-type-1"></i></a>
                     <a href="#" title="To-do">
-                        <i class="ti-check-box ti-icon3"></i>
+                        <i class="ti-check-box ti-icon icon-type-1"></i>
                     </a>
-                    <a href="#" title="Alarm"><i class="ti-alarm-clock ti-icon4"></i
-            ></a>
+                    <a href="#" title="Alarm"><i class="ti-alarm-clock ti-icon icon-type-1"></i></a>
                 </nav>
                 <nav class="nav2">
-                    <a href="#" title="Book"><i class="ti-book ti-icon5"></i></a>
-                    <a href="#" title="Storage"><i class="ti-folder ti-icon6"></i></a>
-                    <a href="#" title="Music"><i class="ti-headphone ti-icon7"></i></a>
+                    <a href="#" title="Book"><i class="ti-book ti-icon icon-type-2"></i></a>
+                    <a href="#" title="Storage"><i class="ti-folder ti-icon icon-type-2"></i></a>
+                    <a href="#" title="Music"><i class="ti-headphone ti-icon icon-type-2"></i></a>
                     <a href="#" title="Discussion">
-                        <i class="ti-comment ti-icon8"></i>
+                        <i class="ti-comment ti-icon icon-type-2"></i>
                     </a>
                 </nav>
-                <a href="#" class="icon-chart"><i class="icon-chart ti-bar-chart"></i
-          ></a>
+                <a href="#" class="icon-chart"><i class="icon-chart ti-bar-chart"></i></a>
                 <a href="#"><i class="icon-help ti-help"></i></a>
             </aside>
             <div id="content">
                 <!-- NOTE FUNCTION -->
-                <div class="notes display-flex" id="app"></div>
+                <div class="frame notes display-flex" id="app"></div>
                 <!-- CALENDER FUNC -->
-                <iframe id="frame-calender" src="../calendar/index.html"></iframe>
+                <iframe id="frame-calender" class="frame calendar" src="../calendar/index.html"></iframe>
 
                 <!-- TO-DO FUNC -->
-                <iframe id="frame-to-do2" src="../kanbanTable/index.html"></iframe>
-                <iframe width="60%" id="frame-to-do1" src="../Todo/index.html"></iframe>
+                <iframe id="frame-to-do2" class="frame to-do" src="../kanbanTable/index.html"></iframe>
+                <iframe width="60%" id="frame-to-do1" class="frame1 to-do" src="../Todo/index.html"></iframe>
 
                 <!-- CLOCK-TIME FUNC -->
-                <iframe id="frame-clock" src="../Alarm/index.html" frameborder="0"></iframe>
+                <iframe id="frame-clock" class="frame alarm" src="../Alarm/index.html" frameborder="0"></iframe>
                 <!-- BOOK FUNC -->
-                <iframe src="../Books/index.html" frameborder="0" id="frame-book"></iframe>
+                <iframe src="../Books/index.html" class="frame book" frameborder="0" id="frame-book"></iframe>
                 <!-- STORE FUNC -->
-                <iframe src="../StorageWeb/index.html" id="frame-storage" frameborder="0"></iframe>
+                <iframe src="../StorageWeb/index.html" class="frame storage" id="frame-storage"
+                    frameborder="0"></iframe>
                 <!-- MUSIC FUNC -->
-                <iframe id="frame-music" src="../MusicPlayer/index.html" frameborder="0"></iframe>
+                <iframe id="frame-music" src="../MusicPlayer/index.html" class="frame music" frameborder="0"></iframe>
 
                 <!-- CHAT FUNC -->
-                <iframe src="../ChatServer/index.html" frameborder="0" id="frame-chat"></iframe>
+                <iframe src="../ChatServer/index.html" frameborder="0" class="frame chat" id="frame-chat"></iframe>
             </div>
         </main>
         <footer></footer>

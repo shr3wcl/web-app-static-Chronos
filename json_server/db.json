@@ -307,5 +307,14 @@
             "idUser": 4,
             "id": 12
         }
+    ],
+    "notification": [
+        {
+            "id":1,
+            "userID": 1,
+            "content": "chào mừng bạn đến với Chronos, chúng tôi chúc bạn tận hưởng thoải mái và đạt được nhiều thành công trong cuộc sống và công việc bằng cách quản lý tốt thời gian nhé ",
+            "time": "2:04",
+            "mark": 0 
+        }
     ]
 }
