@@ -159,15 +159,20 @@ nav {
 
 #info-div-nav {
     width: 200px;
+    max-width: 200px;
+    max-height: 80px;
     color: #fff;
-    height: 100%;
+    /* height: 100%; */
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
 }
 
-#info-div-nav div {
-    float: left;
+#info-div-nav>.img{
+    display: inline-block;
+    width: 50px;
 }
 
 #info-div-nav>.img>img {
@@ -180,11 +185,12 @@ nav {
 }
 
 #info-div-nav>.info {
+    min-width: 180px;
+    max-width: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* align-items: center; */
-    text-align: left;
+    /* text-align: left; */
 }
 
 #info-div-nav>.info>h4 {

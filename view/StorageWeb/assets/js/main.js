@@ -2,24 +2,24 @@
 const api = "https://api.npoint.io/3ee6290b51754f3fc723/file";
 
 function excute() {
-    getFile(renderFrame);
+  getFile(renderFrame);
 }
 
 excute();
 
 function getFile(callback) {
-    fetch(api)
-        .then(Response => {
-            return Response.json();
-        })
-        .then(callback);
+  fetch(api)
+    .then((Response) => {
+      return Response.json();
+    })
+    .then(callback);
 }
 
 function renderFrame(files) {
-    const frame = document.querySelector('#list-file');
+  const frame = document.querySelector("#list-file");
 
-    let html = files.map(file => {
-        return `
+  let html = files.map((file) => {
+    return `
             <li>
                 <div class="picture" onclick="showFile('${file.link}')">
                     <img src='${file.link}'>
@@ -31,15 +31,13 @@ function renderFrame(files) {
                 </div>
                 <a href="#"><i class="ti-import"></i></a>
             </li>
-        `
-    });
+        `;
+  });
 
-    frame.innerHTML = html.join('');
+  frame.innerHTML = html.join("");
 }
 
-
 function showFile(link) {
-    const previewFrame = document.querySelector('#preview-container');
-    console.log(1);
-    previewFrame.style.backgroundImage = `url(${link})`;
+  const previewFrame = document.querySelector("#preview-container");
+  previewFrame.style.backgroundImage = `url(${link})`;
 }

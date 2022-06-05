@@ -174,7 +174,7 @@ header>.user-logo>a {
 
 #navInfo>li{
     list-style: none;
-    background-color: rebeccapurple;
+    background-color: #fff;
     display: inline-block;
 }
 
@@ -193,7 +193,7 @@ header>.user-logo>a {
     min-width: 100%;
     display: inline-block;
     color: #999;
-    padding: 12px 24px;
+    padding: 12px 36px 12px 24px;
 }
 
 #navInfo>li:hover{
